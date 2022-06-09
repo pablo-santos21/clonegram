@@ -1,0 +1,207 @@
+:root {
+  --fundo-primario: rgb(243, 243, 243);
+  --fundo-tema: #121212;
+  --fundo-info: #ffffff;
+  --cor-instagram: #0095f6;
+  --espaco-interno: 10px;
+  --espaco-externo: 1rem;
+  --fundo-escuro: #121212;
+  --fundo-dark: #000000;
+  --texto: #000000;
+  --borda-light: 2px solid #dddada82;
+  --borda-dark: 2px solid #121212;
+  --arredondar: 15px;
+  --imagem: url(../image/instagram-ligth.png);
+  --logo: url(../image/logo-dark.png);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo-primario: #121212;
+    --fundo-tema: rgb(243, 243, 243);
+    --fundo-info: #000000;
+    --texto: #ffffff;
+    --imagem: url(../image/instagram-dark.png);
+    --logo: url(../image/logo-ligth.png);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--fundo-primario);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: var(--texto);
+}
+
+#corpo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 70%;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--imagem);
+  background-size: cover;
+}
+
+.imagem img {
+  height: 45rem;
+  opacity: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--logo);
+  background-size: cover;
+}
+
+.logo img {
+  opacity: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  margin-left: var(--espaco-externo);
+  min-height: 34rem;
+}
+
+.login {
+  background-color: var(--fundo-info);
+  margin-bottom: var(--espaco-externo);
+  border: var(--borda-light);
+  border-radius: var(--arredondar);
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.inf img {
+  height: 3.5rem;
+}
+
+.login .inf {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  height: 100%;
+}
+
+.perfil {
+  margin-top: var(--espaco-externo);
+  margin-bottom: var(--espaco-externo);
+}
+
+.perfil img {
+  border-radius: 50%;
+  height: 6rem;
+}
+
+.login-btn {
+  background-color: var(--cor-instagram);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: var(--espaco-interno);
+  border-radius: 5px;
+  margin: var(--espaco-externo);
+}
+
+.login-out {
+  color: var(--cor-instagram);
+  margin: var(--espaco-interno);
+}
+
+.contas {
+  background-color: var(--fundo-info);
+  margin-bottom: var(--espaco-externo);
+  text-align: center;
+  padding: var(--espaco-interno);
+  color: #7e7e7e !important;
+  border: var(--borda-light);
+  border-radius: var(--arredondar);
+  padding: var(--espaco-externo);
+}
+
+.alterar {
+  color: var(--cor-instagram);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: var(--espaco-externo);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.download {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+}
+
+.app-download {
+  height: 3rem;
+  width: 10rem;
+  background-size: cover;
+}
+
+.app-download:nth-child(1) {
+  background-image: url(../image/apple-button.png);
+}
+
+.app-download:nth-child(2) {
+  background-image: url(../image/googleplay-button.png);
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+  .corpo {
+    width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  .corpo {
+    width: 90%;
+  }
+
+  .imagem {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
